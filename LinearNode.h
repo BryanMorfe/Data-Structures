@@ -15,6 +15,7 @@ public:
     LinearNode(const T t, LinearNode<T> *next);
     // Postcondition: Creates a linear node that points to "next" and item = t.
     
+    /** Member Functions **/
     void setItem(const T &t);
     // Postcondition: Assings t to the data member "item".
     
@@ -28,6 +29,8 @@ public:
     // Postcondition: Returns the address of the node this obj points to, if any.
     
 private:
+    
+    /** Data Members **/
     T item;                     // The value associated to the node.
     LinearNode<T> *nextNode;    // The node that this node obj points to.
 };
