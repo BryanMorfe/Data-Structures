@@ -1,43 +1,43 @@
-#ifndef NODE_H
-#define NODE_H
+#ifndef LINEARNODE_H
+#define LINEARNODE_H
 
 template <class T>
-class Node {
+class LinearNode {
 public:
-    Node();
-    Node(const T t);
-    Node(const T t, Node<T> *next);
+    LinearNode();
+    LinearNode(const T t);
+    LinearNode(const T t, LinearNode<T> *next);
     void setItem(const T &t);
-    void setNextNode(Node<T> *next);
+    void setNextNode(LinearNode<T> *next);
     const T getItem() const;
-    Node<T>* getNextNode() const;
+    LinearNode<T>* getNextNode() const;
 private:
     T item;
-    Node<T> *nextNode;
+    LinearNode<T> *nextNode;
 };
 
 template <class T>
-Node<T>::Node(): item(), nextNode(nullptr)
+LinearNode<T>::LinearNode(): item(), nextNode(nullptr)
 {}
 
 template <class T>
-Node<T>::Node(const T t): item(t), nextNode(nullptr)
+LinearNode<T>::LinearNode(const T t): item(t), nextNode(nullptr)
 {}
 
 template <class T>
-Node<T>::Node(const T t, Node<T> *next): item(t), nextNode(next)
+LinearNode<T>::LinearNode(const T t, Node<T> *next): item(t), nextNode(next)
 {}
 
 template <class T>
-void Node<T>::setItem(const T &t) { item = t; }
+void LinearNode<T>::setItem(const T &t) { item = t; }
 
 template <class T>
-void Node<T>::setNextNode(Node<T> *next) { nextNode = next; }
+void LinearNode<T>::setNextNode(Node<T> *next) { nextNode = next; }
 
 template <class T>
-const T Node<T>::getItem() const { return item; }
+const T LinearNode<T>::getItem() const { return item; }
 
 template <class T>
-Node<T>* Node<T>::getNextNode() const { return nextNode; }
+LinearNode<T>* LinearNode<T>::getNextNode() const { return nextNode; }
 
 #endif
