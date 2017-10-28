@@ -72,7 +72,7 @@ T Queue<T>::dequeue() {
         }
         
     } else {
-        cout << "Attempt to dequeue on empty queue." << endl;
+        std::cout << "Attempt to dequeue on empty queue." << std::endl;
         exit(1);
     }
     
@@ -82,7 +82,7 @@ template <class T>
 T Queue<T>::peek() {
     
     if (isEmpty()) {
-        cout << "Attempt to peek on empty queue." << endl;
+        std::cout << "Attempt to peek on empty queue." << std::endl;
         exit(1);
     }
     
