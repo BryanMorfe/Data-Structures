@@ -44,14 +44,14 @@ LinearNode<T>::LinearNode(const T t): item(t), nextNode(nullptr)
 {}
 
 template <class T>
-LinearNode<T>::LinearNode(const T t, Node<T> *next): item(t), nextNode(next)
+LinearNode<T>::LinearNode(const T t, LinearNode<T> *next): item(t), nextNode(next)
 {}
 
 template <class T>
 void LinearNode<T>::setItem(const T &t) { item = t; }
 
 template <class T>
-void LinearNode<T>::setNextNode(Node<T> *next) { nextNode = next; }
+void LinearNode<T>::setNextNode(LinearNode<T> *next) { nextNode = next; }
 
 template <class T>
 const T LinearNode<T>::getItem() const { return item; }
