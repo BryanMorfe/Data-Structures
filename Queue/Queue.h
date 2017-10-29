@@ -5,18 +5,41 @@
 template <class T>
 class Queue {
 public:
+    
+    /** Constructors & Destructor **/
     Queue();
+    // Postcondition: Intializes the queue with no elements and no head or back node.
+    
     Queue(T item);
+    // Postcondition: Intializes the queue with one element T and sets it as head and back node.
+    
     ~Queue();
+    // Postcondition: Eliminates all the nodes and frees up allocated memory.
+    
+    /** Memeber Functions **/
     void enqueue(T item);
+    // Postcondition: Creates a new node with item t.
+    
     T dequeue();
+    // Precondition: The queue must have at least one node.
+    // Postcondition: Eliminates the next node in queue and returns the T element.
+    
     T peek();
+    // Precondition: The queue must have at least one node.
+    // Postcondition: Returns the next element in queue.
+    
     int count();
+    // Postcondition: Returns the size of the Queue.
+    
     bool isEmpty();
+    // Postcondition: Returns the true if queue is empty, otherwise false.
+    
 private:
-    LinearNode<T> *headNode;
-    LinearNode<T> *backNode;
-    int Count;
+    
+    /** Data Memebers **/
+    LinearNode<T> *headNode;    // The head LinearNode (next in queue).
+    LinearNode<T> *backNode;    // The last LinearNode in queue.
+    int Count;                  // The number of nodes in the queue.
 };
 
 template <class T>
