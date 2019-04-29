@@ -7,6 +7,7 @@ public:
     
     /** Constructors **/
     BinaryNode();
+    
     BinaryNode(const T &t);
     BinaryNode(const T &t, BinaryNode<T> *ln, BinaryNode<T> *rn);
     
@@ -41,37 +42,31 @@ BinaryNode<T>::BinaryNode(const T &t, BinaryNode<T> *ln, BinaryNode *rn): item(t
 {}
 
 template <class T>
-void BinaryNode<T>::setItem(const T &t)
-{
+void BinaryNode<T>::setItem(const T &t) {
     item = t;
 }
 
 template <class T>
-void BinaryNode<T>::setLeftNode(BinaryNode<T> *ln)
-{
+void BinaryNode<T>::setLeftNode(BinaryNode<T> *ln) {
     leftNode = ln;
 }
 
 template <class T>
-void BinaryNode<T>::setLeftNode(BinaryNode<T> *rn)
-{
+void BinaryNode<T>::setLeftNode(BinaryNode<T> *rn) {
     rightNode = rn;
 }
 
 template <class T>
-const T BinaryNode<T>::getItem()
-{
+const T BinaryNode<T>::getItem() {
     return item;
 }
 
 template <class T>
-BinaryNode<T> *BinaryNode<T>::getLeftNode()
-{
+BinaryNode<T> *BinaryNode<T>::getLeftNode() {
     return leftNode;
 }
 
 template <class T>
-BinaryNode<T> *BinaryNode<T>::getRightNode()
-{
+BinaryNode<T> *BinaryNode<T>::getRightNode() {
     return rightNode;
 }
