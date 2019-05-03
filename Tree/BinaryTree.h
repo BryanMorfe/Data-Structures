@@ -106,19 +106,31 @@ void BinaryTree<T>::levelOrderDisplay() {
 
 template <class T>
 BinaryNode<T> * const BinaryTree<T>::breadthFirstSearch(const T &item) {
-    
+    return nullptr;
 }
 
 template <class T>
 BinaryNode<T> * const BinaryTree<T>::depthFirstSearch(const T &item) {
+    
     if (root != nullptr) {
         BinaryNode<T> *temp = root;
+        BinaryNode<T> *node = nullptr;
         
         if (root->getItem() == item)
-            return root;
+            node = root;
         
-        root->getLeftNode(); //finish
-        depthFirstSearch(item);
+        if (node == nullptr) {
+            root = root->getLeftNode();
+            node = depthFirstSearch();
+            
+            if (node == nullptr) {
+                root = root->getLeftNode();
+                node = depthFirstSearch();
+            }
+        }
+        
+        root = temp;
+        return node;
     }
     
     return nullptr;
